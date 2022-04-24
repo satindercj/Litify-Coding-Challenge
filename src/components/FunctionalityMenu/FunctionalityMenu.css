@@ -1,0 +1,57 @@
+.Menu.MuiPaper-root {
+  padding: 2rem;
+  background-color: #45c7aa;
+  color: #fff;
+}
+
+.Menu-Subtitle {
+  padding: 1rem;
+}
+
+.Menu-Subtitle.MuiTypography-root {
+  font-family: "Signika Negative", sans-serif;
+}
+
+.Menu-Search {
+  width: 90%;
+  border: 0.25rem;
+  color: #fff;
+}
+
+.Menu-Search input {
+  color: #fff;
+}
+
+.Menu-Search.MuiFormControl-root {
+  padding-bottom: 1.5rem;
+}
+
+.Menu-Divider {
+  background: #fff;
+  height: 0.15rem;
+}
+
+.Menu-Divider.MuiDivider-root {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.Menu-Button {
+  width: 90%;
+  height: 3rem;
+  color: #fff;
+}
+
+.Menu-Button.MuiButton-root {
+  border: 0.1rem #fff solid;
+  font-family: "Signika Negative", sans-serif;
+  margin-top: 1.5rem;
+}
+
+.Menu-Button.MuiButton-outlined {
+  color: #fff;
+}
+
+.Menu-Button.MuiButton-outlined:hover {
+  border: 0.1rem #fff solid;
+}

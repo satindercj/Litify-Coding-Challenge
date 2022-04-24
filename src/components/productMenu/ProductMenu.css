@@ -1,0 +1,11 @@
+.Product-Title.MuiTypography-root {
+  flex-grow: 1;
+  font-weight: 700;
+  font-family: "Signika Negative", sans-serif;
+}
+
+.Product-Warning.MuiTypography-root {
+  color: #6c6c6c;
+  padding-top: 1.5rem;
+  font-family: "Signika Negative", sans-serif;
+}

@@ -1,0 +1,10 @@
+.Banner {
+  background: #2dbad4;
+  padding: 1rem;
+}
+
+.Title.MuiTypography-root {
+  flex-grow: 1;
+  font-weight: 700;
+  font-family: "Signika Negative", sans-serif;
+}

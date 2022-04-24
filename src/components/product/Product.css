@@ -1,0 +1,25 @@
+.Product-Background.MuiPaper-root {
+  border: 0.2rem solid #17a5c3;
+  padding: 1rem;
+  border-radius: 0.75rem;
+}
+
+.Product-Img {
+  max-width: 100%;
+  height: auto;
+}
+
+.Product-Name.MuiTypography-root {
+  font-weight: 700;
+  font-family: "Signika Negative", sans-serif;
+}
+
+.Product-Description.MuiTypography-root {
+  color: #6c6c6c;
+  font-family: "Signika Negative", sans-serif;
+}
+
+.Product-Price.MuiTypography-root {
+  font-weight: 700;
+  font-family: "Signika Negative", sans-serif;
+}

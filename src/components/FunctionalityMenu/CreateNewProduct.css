@@ -1,0 +1,48 @@
+.MuiFormLabel-root.Mui-focused {
+  color: #000 !important;
+}
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #000 !important;
+  border: 0.1rem solid;
+}
+
+.Dialog-Title {
+  color: #24a0b6;
+  padding: 1rem;
+}
+
+.Dialog-Title.MuiTypography-root {
+  font-family: "Signika Negative", sans-serif;
+}
+
+.Dialog-Label {
+  color: #24a0b6;
+  padding: 1rem;
+}
+
+.Dialog-Label.MuiTypography-root {
+  font-family: "Signika Negative", sans-serif;
+}
+
+.Dialog-Input {
+  width: 80%;
+}
+
+.Dialog-Submit {
+  color: #24a0b6;
+}
+
+.Dialog-Submit.MuiButton-root {
+  border: 0.1rem #24a0b6 solid;
+  font-family: "Signika Negative", sans-serif;
+  color: #24a0b6;
+}
+
+.Dialog-Submit.MuiButton-root:hover {
+  border: 0.1rem #24a0b6 solid;
+}
+
+.Dialog-Submit.Mui-disabled {
+  border: 0.1rem #858585 solid;
+  color: #858585;
+}
