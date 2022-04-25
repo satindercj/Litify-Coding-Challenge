@@ -22,6 +22,7 @@ function App() {
     fetchProducts();
   }, []);
 
+  //Pulls Product Data for GraphQL API
   async function fetchProducts() {
     const apiData: any = await API.graphql({ query: listProducts });
     setProducts(apiData.data.listProducts.items);
