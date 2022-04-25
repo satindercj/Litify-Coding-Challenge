@@ -42,6 +42,7 @@ function App() {
     setProducts(results);
   };
 
+  //Adds Product to dynamoDB and state
   const addProduct = async (newProduct: ProductDataType) => {
     await API.graphql({
       query: createProductMutation,

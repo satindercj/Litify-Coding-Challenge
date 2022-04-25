@@ -34,6 +34,7 @@ function CreateNewProduct(props: CreateNewProductProps) {
     onClose();
   };
 
+  //Add's Product with function from Context
   const addProduct = () => {
     const priceVal = Number(price);
 
@@ -48,6 +49,7 @@ function CreateNewProduct(props: CreateNewProductProps) {
     onClose();
   };
 
+  //Updates state on OnChange Event
   const onChange = (e: any) => {
     const { name, value } = e.target;
     setState((prevState) => ({ ...prevState, [name]: value }));

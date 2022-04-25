@@ -3,22 +3,31 @@ import { useState } from "react";
 import CreateNewProduct from "./CreateNewProduct";
 import "./FunctionalityMenu.css";
 
-function FunctionalityMenu(props: any) {
+export interface FunctionalityMenuProps {
+  searchProductCallback: (searchVal: string) => void;
+}
+
+function FunctionalityMenu(props: FunctionalityMenuProps) {
+  const { searchProductCallback } = props;
+
   const [searchVal, setSearchVal] = useState("");
   const [open, setOpen] = useState(false);
 
+  //Gets input value from search
   const getSearchVal = (event: any) => {
     const searchVal = event.target.value;
 
     setSearchVal(searchVal);
 
-    props.searchProductCallback(searchVal.toLowerCase());
+    searchProductCallback(searchVal.toLowerCase());
   };
 
+  //Opens Dialog
   const handleClickOpen = () => {
     setOpen(true);
   };
 
+  //Closes Dialog
   const handleClose = () => {
     setOpen(false);
   };
