@@ -1,0 +1,15 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-amplifyc43f8e7a51f14-staging-232208-authRole",
+      "UnauthRoleArn": "arn:aws:iam::875930561098:role/amplify-amplifyc43f8e7a51f14-staging-232208-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::875930561098:role/amplify-amplifyc43f8e7a51f14-staging-232208-authRole",
+      "Region": "us-west-1",
+      "DeploymentBucketName": "amplify-amplifyc43f8e7a51f14-staging-232208-deployment",
+      "UnauthRoleName": "amplify-amplifyc43f8e7a51f14-staging-232208-unauthRole",
+      "StackName": "amplify-amplifyc43f8e7a51f14-staging-232208",
+      "StackId": "arn:aws:cloudformation:us-west-1:875930561098:stack/amplify-amplifyc43f8e7a51f14-staging-232208/5cb1e840-c425-11ec-89f5-068b2493d271",
+      "AmplifyAppId": "dewal94axkjzi"
+    }
+  }
+}

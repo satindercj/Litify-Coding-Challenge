@@ -6,51 +6,30 @@ import FunctionalityMenu from "./components/FunctionalityMenu/FunctionalityMenu"
 import Header from "./components/header/Header";
 import ProductMenu from "./components/productMenu/ProductMenu";
 import { ProductContext } from "./context";
-
-const productData: ProductDataType[] = [
-  {
-    img: "https://m.media-amazon.com/images/I/61vCbHw9QBS._AC_UL320_.jpg",
-    name: "Twitch Shirt",
-    description: "Core Logo Tee",
-    price: 20,
-  },
-  {
-    img: "https://m.media-amazon.com/images/I/71F0Vm7FhML._AC_UL320_.jpg",
-    name: "Enamel Pin",
-    description: "Twitch Collectible Enamel Pin",
-    price: 6,
-  },
-  {
-    img: "https://m.media-amazon.com/images/I/71PdLfApbSS._AC_UL320_.jpg",
-    name: "Generic Hoodie",
-    description: "Technoblade Hoodie Unisex Merch for Women Men Teen",
-    price: 22.99,
-  },
-  {
-    img: "https://m.media-amazon.com/images/I/81TrMM9GsFL._AC_UL320_.jpg",
-    name: "Windbreaker Hoodie",
-    description: "Graphic Zip Up Hoodie",
-    price: 52,
-  },
-  {
-    img: "https://m.media-amazon.com/images/I/81x8iXvKxZL._AC_UL320_.jpg",
-    name: "Luv",
-    description: "Men's Dr Pepper Hoodie - Lightweight",
-    price: 39.97,
-  },
-];
+import { API } from "aws-amplify";
+import { listProducts } from "./graphql/queries";
+import { createProduct as createProductMutation } from "./graphql/mutations";
 
 function App() {
   const [products, setProducts] = React.useState([
     { img: "", name: "", description: "", price: 0 },
   ]);
+  const [totalProducts, setTotalProducts] = React.useState([
+    { img: "", name: "", description: "", price: 0 },
+  ]);
 
   React.useEffect(() => {
-    setProducts(productData);
+    fetchProducts();
   }, []);
 
+  async function fetchProducts() {
+    const apiData: any = await API.graphql({ query: listProducts });
+    setProducts(apiData.data.listProducts.items);
+    setTotalProducts(apiData.data.listProducts.items);
+  }
+
   const handleSearchProduct = (searchVal: string) => {
-    const results = productData.filter((product) => {
+    const results = totalProducts.filter((product) => {
       const prodName = product.name.toLowerCase();
       const prodDescription = product.description.toLowerCase();
       return (
@@ -61,9 +40,13 @@ function App() {
     setProducts(results);
   };
 
-  const addProduct = (newProduct: ProductDataType) => {
+  const addProduct = async (newProduct: ProductDataType) => {
+    await API.graphql({
+      query: createProductMutation,
+      variables: { input: newProduct },
+    });
     setProducts([...products, newProduct]);
-    productData.push(newProduct);
+    setTotalProducts([...products, newProduct]);
   };
 
   return (

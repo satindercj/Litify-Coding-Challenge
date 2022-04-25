@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "litifycodingchalleng",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "S:\\Satinder\\Desktop\\Work\\Litify\\litify-coding-challenge\\amplify\\backend\\api\\litifycodingchalleng\\schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 7
+    }
+  }
+}
