@@ -29,6 +29,7 @@ function App() {
     setTotalProducts(apiData.data.listProducts.items);
   }
 
+  //Search's and return Products
   const handleSearchProduct = (searchVal: string) => {
     const results = totalProducts.filter((product) => {
       const prodName = product.name.toLowerCase();
